@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>概述 &mdash; FIBgsy 1.0 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="干涉仪说明书" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            FIBgsy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">概述</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">数据采集和处理</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id4">侧面板</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id5">实时信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">运行时间</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">开始/结束</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id8">信号页</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id9">坐标轴</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id10">分析页</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id11">时域图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">坐标轴</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">短时能量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">坐标轴</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">频谱图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">坐标轴</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id17">选项页</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id18">系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id19">数采卡</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">光学系统</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">数据处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">图表</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23">原始信号图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">时域图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">短时能量图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">频谱图</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id27">存储</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id28">相位数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">报警数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">音频数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">音频文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">循环覆盖</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id34">全局</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id35">日志文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">配置文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">高级</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">FIBgsy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">概述</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/01.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>概述<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<p>本操作手册适用于南京法艾博光电科技有限公司生成的干涉仪扰动检测仪所搭建的fib_gsy软件。</p>
+<p>本软件可以采集和处理光信号，并同时提供数据的显示和存储功能，进一步的，还可以搭建选定模块以完成特定的任务</p>
+<section id="id2">
+<h2>开始<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<p>软件文件夹一般位于gsy设备的操作系统的桌面上，点开文件夹fib_gsy,双击文件夹中的fib_gsy.exe打开软件。</p>
+<figure class="align-center">
+<img alt="_images/1.JPG" src="_images/1.JPG" />
+</figure>
+</section>
+<section id="id3">
+<h2>数据采集和处理<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<p>本软件的数据采集周期为0.1s，即本软件固定每0.1秒从数采卡内存中搬运一次数据，同时，对采集到的这0.1秒的数据进行一次鉴相处理，所以，本软件各信号图的刷新周期为也为0.1秒，即10帧。</p>
+</section>
+</section>
+<section id="id4">
+<h1>侧面板<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h1>
+<ul class="simple">
+<li><p><strong>断纤报警</strong> 开始工作时，如果幅值过低（例如阈值在10%以下）就会发生断纤报警，指示灯由绿变红。</p></li>
+<li><p><strong>断纤报警阈值（%）</strong> 断纤报警阈值可以设置，一般设置10%。</p></li>
+<li><p><strong>断丝报警</strong> 开始工作时，当短时能量值超过阈值时，触发报警，指示灯由绿变红。</p></li>
+<li><p><strong>断丝报警阈值</strong> 断纤报警阈值可以设置，阈值选值参考短时能量图。</p></li>
+</ul>
+<section id="id5">
+<h2>实时信息<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
+<p>当系统开始运行后，将在实时信息显示当前系统的运行参数</p>
+<ul class="simple">
+<li><p><strong>内存</strong> 以百分比的形式显示当前机器的内存占用情况，如果系统运行后发现内存数值不断上涨或占用率接近100%， 则表明机器的性能无法满足当前设置参数的要求，建议停止系统运行并酌情降低参数。</p></li>
+</ul>
+<p>如内存长期达到或接近100%则可能导致无法预知的结果或系统崩溃重启</p>
+<ul class="simple">
+<li><p><strong>CPU</strong> 以百分比的形式显示当前机器的CPU占用情况，由于大量并行计算的存在，很多情况下CPU占用率总是接近100%，</p></li>
+</ul>
+<p>目前CPU的100%占用为正常现象，不会影响软件的使用</p>
+<ul class="simple">
+<li><p><strong>处理耗时</strong> 显示系统相位分析处理的耗时，单位 毫秒（ms） ，由于系统的采集时间固定为100毫秒， 所以如果该处理耗时接近甚至大于100毫秒时，则表明机器的性能无法满足当前设置参数的要求，建议停止系统运行并酌情降低参数。</p></li>
+</ul>
+<p>如处理耗时长期达到或接近100毫秒则可能导致无法预知的结果或系统崩溃重启</p>
+</section>
+<section id="id6">
+<h2>运行时间<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h2>
+<p>在开始按钮上方的运行时间会显示系统从开始运行到目前为止所经过的时间,从左至右依次显示的是:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>天:小时:分钟:秒
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h2>开始/结束<a class="headerlink" href="#id7" title="此标题的永久链接"></a></h2>
+<blockquote>
+<div><p>如点击开始后系统无法运行则会弹出错误框，同时系统再次回到未运行状态。</p>
+</div></blockquote>
+</section>
+</section>
+<section id="id8">
+<h1>信号页<a class="headerlink" href="#id8" title="此标题的永久链接"></a></h1>
+<p>信号页提供系统采集到的原始光信号的显示。</p>
+<section id="id9">
+<h2>坐标轴<a class="headerlink" href="#id9" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p><strong>横轴</strong> 信号图的横轴表示连续采样的时间。</p></li>
+<li><p><strong>纵轴</strong> 信号图的纵轴表示原始信号的强度，单位 <strong>毫伏（mV）</strong> 。</p></li>
+</ul>
+</section>
+</section>
+<section id="id10">
+<h1>分析页<a class="headerlink" href="#id10" title="此标题的永久链接"></a></h1>
+<p>分析页提供经过处理后光信号的显示，分别为时域图、短时能量和频谱图。</p>
+<section id="id11">
+<h2>时域图<a class="headerlink" href="#id11" title="此标题的永久链接"></a></h2>
+<p>时域图提供振动信息沿时间轴的强度变化情况，时间窗长在1秒到10秒可调。</p>
+<blockquote>
+<div><p>窗长必须为整数（1 2 3 4 5 6 7 8 9 10）。</p>
+</div></blockquote>
+</section>
+<section id="id12">
+<h2>坐标轴<a class="headerlink" href="#id12" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p><strong>横轴</strong> 时域图的横轴表示测量的时间。</p></li>
+<li><p><strong>纵轴</strong> 时域图的纵轴表示的是振动强度。</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>短时能量<a class="headerlink" href="#id13" title="此标题的永久链接"></a></h2>
+<dl class="simple">
+<dt>短时能量为时域图每0.1s求得的短时能量，时间窗长与时域图保持一致。</dt><dd><p>窗长必须为整s数（1 2 3 4 5 6 7 8 9 10）。</p>
+</dd>
+</dl>
+</section>
+<section id="id14">
+<h2>坐标轴<a class="headerlink" href="#id14" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p><strong>横轴</strong> 短时能量的横轴表示测量的时间。</p></li>
+<li><p><strong>纵轴</strong> 短时能量的纵轴表示的是振动能量。</p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>频谱图<a class="headerlink" href="#id15" title="此标题的永久链接"></a></h2>
+<p>频谱图显示的是频率随时间的分布情况。</p>
+</section>
+<section id="id16">
+<h2>坐标轴<a class="headerlink" href="#id16" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p><strong>横轴</strong> 频谱图的横轴表示的是频率，单位 <strong>赫兹（Hz）</strong>，横轴的长度为0赫兹到10000赫兹。</p></li>
+<li><p><strong>纵轴</strong> 频谱图的纵轴表示的是时间，单位 <strong>秒（s）</strong>，比如纵轴长度为10时表示频域图显示的是近10秒内的频率信息。</p></li>
+<li><p><strong>颜色条</strong> 频率图中每一点的颜色表示该频率-时间处的幅值，具体颜色对应的值可以参照本页左上角的颜色条。</p></li>
+</ul>
+</section>
+</section>
+<section id="id17">
+<h1>选项页<a class="headerlink" href="#id17" title="此标题的永久链接"></a></h1>
+<section id="id18">
+<h2>系统<a class="headerlink" href="#id18" title="此标题的永久链接"></a></h2>
+<figure class="align-center">
+<img alt="_images/2.JPG" src="_images/2.JPG" />
+</figure>
+<section id="id19">
+<h3>数采卡<a class="headerlink" href="#id19" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>数采卡型号</strong> 选择当前软件所采用的数采卡型号，如果选择的型号与当前机器所安装的型号不符，则系统无法运行。</p></li>
+</ul>
+</section>
+<section id="id20">
+<h3>光学系统<a class="headerlink" href="#id20" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>计算机串口</strong> 检测本机器的可用串口，并显示其对应信息。</p></li>
+<li><p><strong>衰减值</strong> 获取上次实际设置计算机串口的VOA的值，并显示在对应的框中。</p></li>
+<li><p><strong>设置</strong> 以EDFA和UNL框中的数据，设置已选中的计算机串口，设置完毕后会自动在VOA框中显示当前实际设置的值。</p></li>
+</ul>
+<p>如未成功设置串口，系统会弹出错误框，并显示错误内容，点击确认可重新设置。 设置计算机串口时，VOA的实际使用的数值在获取时会有一点点延迟。</p>
+</section>
+</section>
+<section id="id21">
+<h2>数据处理<a class="headerlink" href="#id21" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p><strong>数据后续处理</strong> 关闭该选项则系统不会对采集到的原始数据做任何的处理，如只需要采集原始信号，则可以选择关闭该选项。</p></li>
+</ul>
+<p>关闭该选项后则分析页的所有分析图都将无法显示。</p>
+</section>
+<section id="id22">
+<h2>图表<a class="headerlink" href="#id22" title="此标题的永久链接"></a></h2>
+<figure class="align-center">
+<img alt="_images/3.JPG" src="_images/3.JPG" />
+</figure>
+<section id="id23">
+<h3>原始信号图<a class="headerlink" href="#id23" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>显示原始信号图</strong> 关闭该选项则信号页不会显示原始信号。</p></li>
+</ul>
+<p>关闭该选项对后续的数据处理没有影响，关闭信号显示可以提高些许性能，如对原始信号没有兴趣并需要更高性能时可以关闭该选项。</p>
+</section>
+<section id="id24">
+<h3>时域图<a class="headerlink" href="#id24" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>显示时域波形图</strong> 关闭该选项则信号页不会显示时域图。</p></li>
+</ul>
+<p>关闭时域图后短时能量和频谱图也将无法显示。</p>
+<ul class="simple">
+<li><p><strong>显示点数</strong> 此处设置的时域图纵轴长度。</p></li>
+<li><p><strong>时间窗长</strong> 此处设置时域图横轴长度，单位 <strong>秒（s）</strong> 。</p></li>
+<li><p><strong>是否实时播放时域波形</strong> 打开则实时播放时域波形。</p></li>
+</ul>
+</section>
+<section id="id25">
+<h3>短时能量图<a class="headerlink" href="#id25" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>显示时域图</strong> 关闭该选项则信号页不会显示短时能量图。</p></li>
+<li><p><strong>显示时长</strong> 此处设置的时域图横轴长度，单位 <strong>秒（s）</strong> 。</p></li>
+</ul>
+</section>
+<section id="id26">
+<h3>频谱图<a class="headerlink" href="#id26" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>显示频谱图</strong> 关闭该选项则信号页不会显示频谱图。</p></li>
+<li><p><strong>显示时长</strong> 此处设置的频谱图纵轴长度，单位 <strong>秒（s）</strong> 。</p></li>
+<li><p><strong>频率上限值</strong> 此处设置频谱图横坐标上限值，最高可设为500000赫兹。</p></li>
+<li><p><strong>频率下限值</strong> 此处设置频谱图横坐标初始值。</p></li>
+<li><p><strong>颜色条</strong> 此处设置频谱图颜色条款式。</p></li>
+<li><p><strong>颜色条上限</strong> 此处设置频谱图颜色条上限值，如频率幅度超过该上限则一律显示为颜色条上限值对应颜色。</p></li>
+<li><p><strong>颜色条下限</strong> 此处设置频谱图颜色条下限值，如频率幅度低于该下限则一律显示为颜色条下限值对应颜色。</p></li>
+</ul>
+</section>
+</section>
+<section id="id27">
+<h2>存储<a class="headerlink" href="#id27" title="此标题的永久链接"></a></h2>
+<figure class="align-center">
+<img alt="_images/4.JPG" src="_images/4.JPG" />
+</figure>
+<p>本软件提供下列3个文件存储格式以供选择：</p>
+<p>.bin 二进制格式，直接采用二进制格式将未压缩的数据写入文件，文件后缀.bin，一般来说这种格式写入速度最快。</p>
+<p>.mat Matlab软件所使用的格式，对数据会有所压缩，写入速度较快。</p>
+<p>需要注意的是Matlab是以列优先的方式存储数据的，所以用Matlab打开本软件存储的.mat格式文件时，二维数据的行表示传感器数据，列表示时间。数据呈现形式如下  表1 所示：</p>
+<table class="docutils align-default" id="id38">
+<caption><span class="caption-text">表1  gsy中的数据形式</span><a class="headerlink" href="#id38" title="此表格的永久链接"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p>时间\中频信号强度</p></td>
+<td><p>d0</p></td>
+<td><p>d1</p></td>
+<td><p>d2</p></td>
+<td><p>d3</p></td>
+<td><p>……</p></td>
+<td><p>dn</p></td>
+</tr>
+<tr class="row-even"><td><p>t0</p></td>
+<td><p>[t0,d0]</p></td>
+<td><p>[t0,d1]</p></td>
+<td><p>[t0,d2]</p></td>
+<td><p>[t0,d3]</p></td>
+<td><p>……</p></td>
+<td><p>[t0,dn]</p></td>
+</tr>
+<tr class="row-odd"><td><p>t1</p></td>
+<td><p>[t1,d0]</p></td>
+<td><p>[t1,d1]</p></td>
+<td><p>[t1,d2]</p></td>
+<td><p>[t1,d3]</p></td>
+<td><p>……</p></td>
+<td><p>[t1,dn]</p></td>
+</tr>
+<tr class="row-even"><td><p>t2</p></td>
+<td><p>[t2,d0]</p></td>
+<td><p>[t2,d1]</p></td>
+<td><p>[t2,d2]</p></td>
+<td><p>[t2,d3]</p></td>
+<td><p>……</p></td>
+<td><p>[t2,dn]</p></td>
+</tr>
+<tr class="row-odd"><td><p>t3</p></td>
+<td><p>[t3,d0]</p></td>
+<td><p>[t3,d1]</p></td>
+<td><p>[t3,d2]</p></td>
+<td><p>[t3,d3]</p></td>
+<td><p>……</p></td>
+<td><p>[t3.dn]</p></td>
+</tr>
+<tr class="row-even"><td><p>……</p></td>
+<td><p>……</p></td>
+<td><p>……</p></td>
+<td><p>……</p></td>
+<td><p>……</p></td>
+<td><p>……</p></td>
+<td><p>……</p></td>
+</tr>
+<tr class="row-odd"><td><p>tn</p></td>
+<td><p>[tn,d0]</p></td>
+<td><p>[tn,d1]</p></td>
+<td><p>[tn,d2]</p></td>
+<td><p>[tn,d3]</p></td>
+<td><p>……</p></td>
+<td><p>[tn,dn]</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>.csv</strong> .csv格式是以逗号分隔符分割数据的格式,这种格式可以直接使用excel或记事本打开查看,但是写入速度很慢。</p>
+<p>由于.csv格式的写入速度很慢,一般只用于现场少量数据的写入所用,请谨慎设置采集参数和缩短运行时间以免数据在内存中等待写入时过度积压。</p>
+<p>三个文件的数据只是呈现形式的不同,在内存中的存储形式是相同的,在内存中的存储顺序为:</p>
+<blockquote>
+<div><p><cite>[t0,d0],[t0,d1],[t0,d2]…[t1,d0],[t1,d1]…[t2,d0],[t2,d1]…</cite></p>
+</div></blockquote>
+<p>在选择了保存的文件夹之后,每次系统开始运行之后,都会在该文件夹目录下建立一个以当前时间(<cite>yyyy-MM-dd hh_mm_ss</cite>)命名的文件夹,
+同时将本次运行时产生的该类型数据保存在该文件夹目录下</p>
+<p>保存的文件名以 <cite>9位数字</cite> + <cite>文件名后缀</cite> 的格式命名,其中9位数字是一个持续增长的序号,每保存一个文件,序号都会 <cite>+1</cite>,以.bin格式举例:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>000000001.bin
+000000002.bin
+000000003.bin
+...
+</pre></div>
+</div>
+<p>当写入的文件数量达到最大个数时,会自动删除编号最小的现存文件。</p>
+<section id="id28">
+<h3>相位数据<a class="headerlink" href="#id28" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>保存相位数据</strong> 勾选此选项则保存相位数据。</p></li>
+<li><p><strong>相位信号数据保存路径</strong> 此处选择相位数据保存的文件夹。</p></li>
+<li><p><strong>相位信号保存格式</strong> 此处选择相位的保存格式。</p></li>
+</ul>
+</section>
+<section id="id29">
+<h3>报警数据<a class="headerlink" href="#id29" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>保存报警数据</strong> 勾选此选项则保存断丝和断纤报警数据。</p></li>
+<li><p><strong>报警数据保存路径</strong> 此处选择报警数据保存的文件夹。</p></li>
+<li><p><strong>报警数据保存格式</strong> 此处选择报警数据的保存格式。</p></li>
+</ul>
+</section>
+<section id="id30">
+<h3>音频数据<a class="headerlink" href="#id30" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>保存音频数据</strong> 勾选此选项则保存时域图音频数据。</p></li>
+<li><p><strong>音频数据保存路径</strong> 此处选择音频数据保存的文件夹。</p></li>
+<li><p><strong>音频数据保存格式</strong> 此处选择相位的保存格式。</p></li>
+</ul>
+</section>
+<section id="id31">
+<h3>音频文件<a class="headerlink" href="#id31" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>保存音频文件</strong> 勾选此选项则保存时域图音频文件。</p></li>
+<li><p><strong>音频数据保存路径</strong> 此处选择音频文件保存的文件夹。</p></li>
+</ul>
+</section>
+<section id="id32">
+<h3>循环覆盖<a class="headerlink" href="#id32" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>是否开启循环覆盖</strong> 关闭该选项则直到把存储空间存至80%开始循环覆盖。</p></li>
+<li><p><strong>单个文件夹存储时长/h</strong> 在此处选择单个文件夹的最大存储时间</p></li>
+</ul>
+</section>
+<section id="id33">
+<h3>其他<a class="headerlink" href="#id33" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>单一文件时长</strong> 此处显示每个文件中包含数据的时长，每个文件中包含有0.1秒的数据。</p></li>
+<li><p><strong>文件头格式</strong> 此处选择文件头的格式</p></li>
+</ul>
+<p>.bin文件头只有在选择.bin文件保存格式时有效</p>
+</section>
+</section>
+<section id="id34">
+<h2>全局<a class="headerlink" href="#id34" title="此标题的永久链接"></a></h2>
+<section id="id35">
+<h3>日志文件<a class="headerlink" href="#id35" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>记录日志</strong> 关闭该选项则不会记录日志</p></li>
+<li><p><strong>日志分级</strong> 选择记录日志的级别，一般来说debug为调试软件时选择，info为正常运行软件时选择，如只需要记录错误信息，请选择warn或更高的级别。</p></li>
+</ul>
+<p>debug级别的日志会记录大量信息，如不需要调试软件的错误，请选择info及其以上的级别。</p>
+<ul class="simple">
+<li><p><strong>日志文件保存路径</strong> 在此处选择日志文件的保存路径</p></li>
+<li><p><strong>日志文件最大尺寸</strong> 在此处选择单个日志文件的最大尺寸，单位 <strong>MB</strong> 。</p></li>
+<li><p><strong>日志文件最大数量</strong> 在此处先择日志文件的最大数据，当日志文件的数量记录只最大时，将首先替换掉最老的日志文件。</p></li>
+</ul>
+</section>
+<section id="id36">
+<h3>配置文件<a class="headerlink" href="#id36" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>更改配置文件路径</strong> 勾选该选项后可修改配置文件路径。</p></li>
+<li><p><strong>系统配置文件保存路径</strong> 修改配置文件保存路径(此文件会保存当前所有选项页的设置)。</p></li>
+</ul>
+</section>
+<section id="id37">
+<h3>高级<a class="headerlink" href="#id37" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p><strong>是否自动开始采集</strong> 勾选该选项则软件会在打开后自动开始运行。</p></li>
+<li><p><strong>时间延迟</strong> 软件自动运行的时间延时,单位 <strong>秒(s)</strong> ,如此处设置为10时,软件将在打开或停止运行后的10秒后自动开始运行。</p></li>
+<li><p><strong>恢复默认设置</strong> 点击后软件将恢复默认状态,所有设置将变为预设值。</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="index.html" class="btn btn-neutral float-left" title="干涉仪说明书" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2023, FIB.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
